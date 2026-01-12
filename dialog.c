@@ -11,7 +11,7 @@ my_string my_readline(void) {
     char buffer[BUFFER_SIZE];
     memset(buffer, 0, BUFFER_SIZE);
     // Читаем строку через scanf с форматом для чтения всей строки до перевода строки
-    if (scanf(" %4095[^\n]", buffer) != 1) {
+    if (scanf(" %4095[^\n]", buffer) != 0) {
         // Удаляем символ конца строки, если он есть
         size_t len = strlen(buffer);
         printf("Line size: %ld\n", len); // Debug print
