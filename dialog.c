@@ -45,16 +45,13 @@ void run_dialog(void) {
             break;
         }
         
-        // Обрабатываем строку
         my_string output = process_string(&input);
         
-        // Выводим входную строку в кавычках
         printf("Входная:  \"%s\"\n", my_string_cstr(&input));
-        
-        // Выводим выходную строку в кавычках
         printf("Выходная: \"%s\"\n", my_string_cstr(&output));
         reorder_words(&output);
-        printf("Преобразованная: \"%s\"", my_string_cstr(&output));
+        printf("Преобразованная: \"%s\"\n", my_string_cstr(&output));
+        
         printf("\n");
         
         // Освобождаем память
